@@ -1,0 +1,28 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    width: 100dvw;
+}
+
+body {
+    margin: 3dvh 3dvw;
+    padding: 0;
+    /*because of margin. CSS thinks 93 is noticeably less than 100 - 2 * 3 that's why calc()*/
+    height: calc(100dvh - 2 * 3dvh);
+    width: calc(100dvw - 2 * 3dvw);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+button {
+    background-color: aquamarine;
+    margin: auto;
+    text-transform: uppercase;
+    height: 10dvh;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}

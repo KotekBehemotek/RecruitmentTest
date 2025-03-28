@@ -1,0 +1,72 @@
+:root {
+    --standard-color-hehe: #24ffff;
+    --standard-color-nothehe: #ffd9e0;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    width: 100dvw;
+}
+
+body {
+    margin: 3dvh 3dvw;
+    padding: 0;
+    background-color: aquamarine;
+    /*because of margin. CSS thinks 93 is noticeably less than 100 - 2 * 3 that's why calc()*/
+    height: calc(100dvh - 2 * 3dvh);
+    width: calc(100dvw - 2 * 3dvw);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    visibility: hidden;
+    height: 0;
+}
+
+input {
+    height: 7dvh;
+    width: 30dvw;
+    min-height: 20px;
+    min-width: 100px;
+}
+
+button {
+    height: 6dvh;
+    width: 10dvw;
+    min-height: 15px;
+    min-width: 70px;
+}
+
+input, button {
+    margin-top: 2.5dvh;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    font-size: 100%;
+    transition-property: background-color;
+    transition-duration: 200ms;
+}
+
+input:valid {
+    background-color: var(--standard-color-hehe);
+}
+
+input:invalid {
+    background-color: var(--standard-color-nothehe);
+}
+
+form:valid button {
+    background-color: var(--standard-color-hehe);
+}
+
+form:invalid button {
+    background-color: var(--standard-color-nothehe);
+}
