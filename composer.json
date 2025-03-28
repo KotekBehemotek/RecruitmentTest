@@ -1,0 +1,19 @@
+{
+  "name": "connection-test",
+  "description": "Recruitment test project",
+  "type": "project",
+  "require": {
+    "php": ">=7.0",
+    "ext-mysqli": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "echo 'Installation finished'"
+    ]
+  }
+}
